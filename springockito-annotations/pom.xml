@@ -4,7 +4,7 @@
 
     <groupId>org.kubek2k</groupId>
     <artifactId>springockito-annotations</artifactId>
-    <version>1.0.10-olivervbk</version>
+    <version>1.0.10-SNAPSHOT</version>
     <name>Springockito annotations</name>
 
     <parent>
@@ -13,11 +13,11 @@
         <version>1.0.8-SNAPSHOT</version>
     </parent>
 
-    <scm>
-        <url>https://github.com/olivervbk/springockito</url>
-        <connection>https://github.com/olivervbk/springockito</connection>
-        <developerConnection>scm:git:https://github.com/olivervbk/springockito</developerConnection>
-    </scm>
+    <!--<scm>-->
+        <!--<url>https://github.com/olivervbk/springockito</url>-->
+        <!--<connection>https://github.com/olivervbk/springockito</connection>-->
+        <!--<developerConnection>scm:git:https://github.com/olivervbk/springockito</developerConnection>-->
+    <!--</scm>-->
 
     <dependencies>
         <dependency>
@@ -52,4 +52,17 @@
             <artifactId>fest-assert</artifactId>
         </dependency>
     </dependencies>
+
+
+
+    <distributionManagement>
+        <repository>
+            <id>releases</id>
+            <url> http://172.30.0.45:8081/nexus/content/repositories/snapshots </url>
+        </repository>
+        <snapshotRepository>
+            <id>snapshots</id>
+            <url>http://172.30.0.45:8081/nexus/content/repositories/snapshots</url>
+        </snapshotRepository>
+    </distributionManagement>
 </project>

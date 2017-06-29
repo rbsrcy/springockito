@@ -7,11 +7,11 @@
     <name>Springockito parent</name>
     <packaging>pom</packaging>
 
-    <parent>
-        <groupId>org.sonatype.oss</groupId>
-        <artifactId>oss-parent</artifactId>
-        <version>7</version>
-    </parent>
+    <!--<parent>-->
+        <!--<groupId>org.sonatype.oss</groupId>-->
+        <!--<artifactId>oss-parent</artifactId>-->
+        <!--<version>7</version>-->
+    <!--</parent>-->
 
     <licenses>
         <license>
@@ -29,11 +29,11 @@
         </developer>
     </developers>
 
-    <scm>
-        <url>https://bitbucket.org/kubek2k/springockito</url>
-        <connection>https://bitbucket.org/kubek2k/springockito/</connection>
-        <developerConnection>scm:hg:https://bitbucket.org/kubek2k/springockito/</developerConnection>
-    </scm>
+    <!--<scm>-->
+        <!--<url>https://bitbucket.org/kubek2k/springockito</url>-->
+        <!--<connection>https://bitbucket.org/kubek2k/springockito/</connection>-->
+        <!--<developerConnection>scm:hg:https://bitbucket.org/kubek2k/springockito/</developerConnection>-->
+    <!--</scm>-->
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -158,17 +158,28 @@
                         </execution>
                     </executions>
                 </plugin>
-                <plugin>
-                    <groupId>org.apache.maven.plugins</groupId>
-                    <artifactId>maven-release-plugin</artifactId>
-                    <version>2.2.2</version>
-                    <configuration>
-                        <mavenExecutorId>forked-path</mavenExecutorId>
-                        <useReleaseProfile>false</useReleaseProfile>
-                        <arguments>-Psonatype-oss-release</arguments>
-                    </configuration>
-                </plugin>
+                <!--<plugin>-->
+                    <!--<groupId>org.apache.maven.plugins</groupId>-->
+                    <!--<artifactId>maven-release-plugin</artifactId>-->
+                    <!--<version>2.2.2</version>-->
+                    <!--<configuration>-->
+                        <!--<mavenExecutorId>forked-path</mavenExecutorId>-->
+                        <!--<useReleaseProfile>false</useReleaseProfile>-->
+                        <!--<arguments>-Psonatype-oss-release</arguments>-->
+                    <!--</configuration>-->
+                <!--</plugin>-->
             </plugins>
         </pluginManagement>
     </build>
+
+    <distributionManagement>
+        <repository>
+            <id>releases</id>
+            <url> http://172.30.0.45:8081/nexus/content/repositories/snapshots </url>
+        </repository>
+        <snapshotRepository>
+            <id>snapshots</id>
+            <url>http://172.30.0.45:8081/nexus/content/repositories/snapshots</url>
+        </snapshotRepository>
+    </distributionManagement>
 </project>

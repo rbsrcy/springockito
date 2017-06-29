@@ -10,14 +10,14 @@
     <parent>
         <groupId>org.kubek2k</groupId>
         <artifactId>springockito-parent</artifactId>
-        <version>1.0.7</version>
+        <version>1.0.8-SNAPSHOT</version>
     </parent>
 
-    <scm>
-        <url>https://bitbucket.org/kubek2k/springockito</url>
-        <connection>https://bitbucket.org/kubek2k/springockito</connection>
-        <developerConnection>scm:hg:https://bitbucket.org/kubek2k/springockito</developerConnection>
-    </scm>
+    <!--<scm>-->
+        <!--<url>https://bitbucket.org/kubek2k/springockito</url>-->
+        <!--<connection>https://bitbucket.org/kubek2k/springockito</connection>-->
+        <!--<developerConnection>scm:hg:https://bitbucket.org/kubek2k/springockito</developerConnection>-->
+    <!--</scm>-->
 
     <dependencies>
         <dependency>
@@ -57,4 +57,15 @@
             <artifactId>fest-assert</artifactId>
         </dependency>
     </dependencies>
+
+    <distributionManagement>
+        <repository>
+            <id>releases</id>
+            <url> http://172.30.0.45:8081/nexus/content/repositories/snapshots </url>
+        </repository>
+        <snapshotRepository>
+            <id>snapshots</id>
+            <url>http://172.30.0.45:8081/nexus/content/repositories/snapshots</url>
+        </snapshotRepository>
+    </distributionManagement>
 </project>
